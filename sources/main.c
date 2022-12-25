@@ -120,7 +120,7 @@ void dataTypes()
     double gpa = 3.4;
     float alpha = 1.4;
     char grade = 'A';
-    char phrase[] = "Hello string in C"; // In C this cant be reassinged since it's an array of chars
+    char phrase[] = "Hello! String in C"; // In C this cant be reassinged since it's an array of chars
     // phrase = "New"; - this fails
     char* reassigned = ""; // Assigning as a pointer allow you to change it if need
     reassigned = "Reassigned string"; // this works
@@ -273,7 +273,7 @@ int* array_diff(const int* arr1, size_t n1, const int* arr2, size_t n2, size_t* 
         }
     }
 
-    z = &size;
+    *z = size;
     return array1;
 }
 
