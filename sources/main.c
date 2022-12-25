@@ -8,6 +8,87 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int variables(char* name);
+void dataTypes();
+void fun_with_numbers();
+void user_inputs();
+void arrays();
+void printFirtNumber(int* array, int number);
+void printNatualNumbersFor(int num);
+void analyzeGrade(char grade);
+int* array_diff(const int* arr1, size_t n1, const int* arr2, size_t n2, size_t* z);
+long long findNb(long long m);
+int removeElement(int* arr, int len, int indexToRemove);
+
+int main()
+{
+    printf("Hello C \n");
+    printf("Hey you there \n");
+
+    // Print a triangle
+    printf("   /|\n");
+    printf("  / |\n");
+    printf(" /  |\n");
+    printf("/___|\n");
+
+    variables("Racka");
+
+    dataTypes();
+
+    fun_with_numbers();
+
+    // user_inputs();
+
+    // multiplication();
+
+    arrays();
+
+    externalFunction();
+
+    int newArray[] = { 20, 4, 3, 5 };
+    printFirtNumber(newArray, 4);
+
+    // calculator();
+
+    printNatualNumbersFor(10);
+
+    analyzeGrade('C');
+
+    studentTest();
+
+    memoryFunc();
+
+    pointers();
+
+    // files();
+
+    const int ARRAY_SIZE = 5;
+    size_t zee = 1;
+    size_t* z = &zee;
+    int arr1[] = { 1, 2, 4, 5, 6 };
+    int arr2[] = { 2, 6 };
+
+    int values[] = { 1, 2, 3, 4, 5 };
+
+    removeElement(values, ARRAY_SIZE, 2);
+    removeElement(values, ARRAY_SIZE, 4);
+
+    printf("Array values \n");
+    for (size_t k = 0; k < ARRAY_SIZE; k++) {
+        printf("%d ", values[k]);
+    }
+    printf("\n");
+
+    // for (size_t a = 0; a < *z; a++) {
+    //     printf("%d \n", array[a]);
+    // }
+
+    // long long value = findNb(10000000000000);
+    // printf("n is %lld", value);
+
+    return 0;
+}
+
 int variables(char* name)
 {
 
@@ -202,73 +283,4 @@ int removeElement(int* arr, int len, int indexToRemove)
     memmove(arr + 1, arr, sizeof(int) * indexToRemove);
     arr[0] = 0;
     return 1;
-}
-
-int main()
-{
-    printf("Hello C \n");
-    printf("Hey you there \n");
-
-    // Print a triangle
-    printf("   /|\n");
-    printf("  / |\n");
-    printf(" /  |\n");
-    printf("/___|\n");
-
-    variables("Racka");
-
-    dataTypes();
-
-    fun_with_numbers();
-
-    // user_inputs();
-
-    // multiplication();
-
-    arrays();
-
-    externalFunction();
-
-    int newArray[] = { 20, 4, 3, 5 };
-    printFirtNumber(newArray, 4);
-
-    // calculator();
-
-    printNatualNumbersFor(10);
-
-    analyzeGrade('C');
-
-    studentTest();
-
-    memoryFunc();
-
-    pointers();
-
-    // files();
-
-    const int ARRAY_SIZE = 5;
-    size_t zee = 1;
-    size_t* z = &zee;
-    int arr1[] = { 1, 2, 4, 5, 6 };
-    int arr2[] = { 2, 6 };
-
-    int values[] = { 1, 2, 3, 4, 5 };
-
-    removeElement(values, ARRAY_SIZE, 2);
-    removeElement(values, ARRAY_SIZE, 4);
-
-    printf("Array values \n");
-    for (size_t k = 0; k < ARRAY_SIZE; k++) {
-        printf("%d ", values[k]);
-    }
-    printf("\n");
-
-    // for (size_t a = 0; a < *z; a++) {
-    //     printf("%d \n", array[a]);
-    // }
-
-    // long long value = findNb(10000000000000);
-    // printf("n is %lld", value);
-
-    return 0;
 }
