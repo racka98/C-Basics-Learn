@@ -7,6 +7,7 @@
 #include "Structs.c"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int variables(char* name);
 void dataTypes();
@@ -131,6 +132,7 @@ void dataTypes()
     printf("Character: %c \n", grade);
     printf("String: %s \n", phrase);
     printf("String Pointer: %s \n", reassigned);
+    printf("Reassigned String Pointer Length: %d\n", strlen(reassigned));
 }
 
 void fun_with_numbers()
