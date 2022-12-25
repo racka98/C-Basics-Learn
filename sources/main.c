@@ -13,6 +13,7 @@ void dataTypes();
 void fun_with_numbers();
 void user_inputs();
 void arrays();
+void multidimensionalArray();
 void printFirtNumber(int* array, int number);
 void printNatualNumbersFor(int num);
 void analyzeGrade(char grade);
@@ -41,7 +42,9 @@ int main()
 
     // multiplication();
 
+    printf("******** ARRAYS *********\n");
     arrays();
+    multidimensionalArray();
 
     externalFunction();
 
@@ -162,7 +165,6 @@ void user_inputs()
 
 void arrays()
 {
-    printf("**********ARRAYS********** \n");
     int numArray[] = { 1, 4, 5, 3 };
     numArray[2] = 20;
 
@@ -172,6 +174,19 @@ void arrays()
 
     for (size_t i = 0; i < len; i++) {
         printf("My num array: %d \n", numArray[i]);
+    }
+}
+
+void multidimensionalArray()
+{
+    printf("**** Multidimensional Arrays *****\n");
+    int array[2][3] = { { 1, 3, 5 }, { 2, 4, 6 } };
+    printf("Item: %d\n", array[0][1]);
+    for (size_t i = 0; i < 2; i++) {
+        int* inner = array[i];
+        for (size_t j = 0; j < 3; j++) {
+            printf("Item no: %d has array with %d at index: %d\n", (i + 1), (inner[j]), j);
+        }
     }
 }
 
