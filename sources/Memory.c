@@ -14,5 +14,7 @@ extern int memoryFunc()
     printf("Memory Addess of gpa: %p \n", &gpa);
     printf("Memory Addess of grade: %p \n", &grade);
 
+    printf("**********DYNAMIC MEMORY ALLOCATION********** \n");
+
     return 0;
 }

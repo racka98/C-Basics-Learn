@@ -1,4 +1,5 @@
 #include "Calculator.c"
+#include "Enums.c"
 #include "ExternalFunction.c"
 #include "Files.c"
 #include "Memory.c"
@@ -65,6 +66,8 @@ int main()
     pointers();
 
     // files();
+
+    enumarations();
 
     const int ARRAY_SIZE = 5;
     size_t zee = 1;
