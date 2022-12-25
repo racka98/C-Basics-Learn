@@ -2,6 +2,7 @@
 #include "ExternalFunction.c"
 #include "Files.c"
 #include "Memory.c"
+#include "Multiplication.c"
 #include "Pointers.c"
 #include "Structs.c"
 #include <stdio.h>
@@ -12,6 +13,8 @@ int variables(char* name)
 
     int age = 70;
     // char name[] = "George";
+    int variable1 = 2, variable2 = 25;
+    printf("variable 1: %d, variable 2: %d\n", variable1, variable2);
 
     printf("**********VARIABLES********** \n");
     printf("There once was a man named George. %s\n", name);
@@ -83,6 +86,8 @@ void arrays()
     numArray[2] = 20;
 
     int len = sizeof numArray / sizeof numArray[0]; // Length of the array
+    long mySize = sizeof(numArray);
+    printf_s("Mysize is : %d\n", mySize);
 
     for (size_t i = 0; i < len; i++) {
         printf("My num array: %d \n", numArray[i]);
@@ -104,8 +109,11 @@ void printFirtNumber(int* array, int number)
 void printNatualNumbersFor(int num)
 {
     printf("**********NATURAL NUMBERS********** \n");
-    int i = 1;
+    int age = 20;
+    char* message = (age >= 18) ? "You are old enough" : "Too young";
+    printf("Message: %s", message);
 
+    int i = 1;
     while (i <= num) {
         if (num < 0) {
             break;
@@ -119,9 +127,10 @@ void printNatualNumbersFor(int num)
 void analyzeGrade(char grade)
 {
     switch (grade) {
-    case 'A':
+    case 'A': {
         printf("You are Excellent!");
         break;
+    }
     case 'B':
         printf("You did great!");
         break;
@@ -213,6 +222,8 @@ int main()
     fun_with_numbers();
 
     // user_inputs();
+
+    // multiplication();
 
     arrays();
 
